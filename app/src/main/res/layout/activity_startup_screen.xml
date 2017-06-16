@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#3346FF"
-    tools:context="com.quidproquo.floo.StartupScreen">
+    tools:context="com.quidproquo.floo.StartupScreen"
+    android:weightSum="1"
+    android:gravity="center_horizontal">
 
-</android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/imageView5"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@mipmap/ic_launcher" />
+</LinearLayout>
