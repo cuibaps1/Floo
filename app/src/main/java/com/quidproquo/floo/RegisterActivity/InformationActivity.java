@@ -1,13 +1,15 @@
-package com.quidproquo.floo;
+package com.quidproquo.floo.RegisterActivity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class RegisterActivity extends AppCompatActivity {
+import com.quidproquo.floo.R;
+
+public class InformationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_information);
     }
 }

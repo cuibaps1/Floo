@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.quidproquo.floo.RegisterActivity.RegisterActivity;
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText editTextUsername;
