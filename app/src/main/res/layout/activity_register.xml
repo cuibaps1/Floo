@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Email" />
+            android:hint="Email" />
 
         <EditText
             android:id="@+id/password"
@@ -68,7 +68,7 @@
             android:layout_marginTop="10dp"
             android:ems="10"
             android:inputType="textPassword"
-            android:text="Password" />
+            android:hint="Password" />
 
         <EditText
             android:id="@+id/confirmPassword"
@@ -77,7 +77,27 @@
             android:layout_marginTop="10dp"
             android:ems="10"
             android:inputType="textPassword"
-            android:text="Password" />
+            android:hint="Confirm Password" />
+        <TextView
+            android:gravity="center_horizontal"
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="" />
+        <TextView
+            android:gravity="center_horizontal"
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="By clicking next, you accept " />
 
+        <TextView
+            android:gravity="center_horizontal"
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="the Term and Service." />
     </LinearLayout>
+
+
 </LinearLayout>

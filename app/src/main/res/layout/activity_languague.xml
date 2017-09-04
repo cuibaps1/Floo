@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:orientation="vertical"
-    tools:context="com.quidproquo.floo.RegisterActivity.InformationActivity">
-
+    tools:context="com.quidproquo.floo.RegisterActivity.LanguagueActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,11 +25,11 @@
             android:layout_weight="0.02">
 
             <TextView
-                android:id="@+id/Next"
+                android:id="@+id/Finish"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Next  >"
+                android:text="Finish"
                 android:textColor="#00B2FF"
                 android:textSize="18dp" />
 
@@ -44,13 +43,31 @@
 
     </LinearLayout>
 
-
-    <ImageView
-        android:id="@+id/imageView8"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/ic_launcher_round"
-        android:layout_weight="0.19" />
+        android:layout_height="0dp"
+        android:layout_weight="0.21"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="267dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Native Tounge:                       "
+            android:textSize="20sp"
+            android:layout_weight="0.24" />
+
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="First Language"
+            android:inputType="textPersonName" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,71 +76,45 @@
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:weightSum="1">
+        <TextView
+            android:id="@+id/learnLanguage"
+            android:layout_width="267dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Learning:                                "
+            android:textSize="20sp"
+            android:layout_weight="0.13" />
 
         <EditText
-            android:id="@+id/firstName"
-            android:layout_width="250dp"
+            android:id="@+id/learnLanguage1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="First Name" />
+            android:hint="Language 1" />
+
         <EditText
-            android:id="@+id/lastName"
-            android:layout_width="250dp"
+            android:id="@+id/learnLanguage2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="Last Name" />
-
-
+            android:hint="Language 2" />
+        <EditText
+            android:id="@+id/learnLanguage3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Language 3" />
 
 
 
 
     </LinearLayout>
 
-    <TextView
-        android:gravity="center_horizontal"
-        android:id="@+id/textView4"
-        android:textSize="20sp"
-        android:layout_width="255dp"
-        android:layout_height="wrap_content"
-        android:text="Date of Birth:" />
-
-    <LinearLayout
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.70"
-        android:orientation="horizontal"
-        android:weightSum="1"
-        android:gravity="center_horizontal">
 
 
-        <EditText
-            android:id="@+id/monthOfBirth"
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="   MM"
-            android:layout_weight="0.11" />
 
-
-        <EditText
-            android:id="@+id/yearOfBirth"
-            android:layout_width="57dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="     YYYY"
-            android:layout_weight="0.16" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="51dp"
-            android:layout_height="43dp"
-            app:srcCompat="@drawable/cal" />
 
     </LinearLayout>
-</LinearLayout>

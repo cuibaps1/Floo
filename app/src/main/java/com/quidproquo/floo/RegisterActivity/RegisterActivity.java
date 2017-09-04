@@ -76,15 +76,15 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             progressDialog.setMessage("Registering");
             progressDialog.show();
 
-            firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            firebaseAuth.createUserWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         //user successfully registered and logged in
                         //start profile activity
                         Toast.makeText(RegisterActivity.this, "Register Successed", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getApplicationContext(),InformationActivity.class);
-                        startActivity(intent);
+                        signInUser();
                     } else {
                         Toast.makeText(RegisterActivity.this, "Register Failed", Toast.LENGTH_LONG).show();
                     }
@@ -94,6 +94,30 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             Toast.makeText(this, "Please confirm your password again", Toast.LENGTH_SHORT).show();
             return;
         }
+    }
+
+    private void signInUser(){
+        String email = emailText.getText().toString().trim();
+        String password = passwordText.getText().toString().trim();
+
+        if(TextUtils.isEmpty(email)){
+            Toast.makeText(this, "Please enter email", Toast.LENGTH_SHORT).show();
+            return;
+        } else if(TextUtils.isEmpty(password)){
+            Toast.makeText(this, "Please enter password", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        firebaseAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    Intent intent = new Intent(getApplicationContext(),InformationActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
     }
 
     @Override

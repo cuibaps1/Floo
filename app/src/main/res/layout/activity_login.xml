@@ -46,12 +46,12 @@
         android:gravity="center_horizontal">
 
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/email"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="User Name" />
+            android:hint="Email" />
 
         <EditText
             android:id="@+id/password"
@@ -60,14 +60,14 @@
             android:layout_marginTop="10dp"
             android:ems="10"
             android:inputType="textPassword"
-            android:text="Password" />
+            android:hint="Password" />
 
         <TextView
             android:id="@+id/signin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:text="Log In"
+            android:text="Sign In"
             android:textColor="#00B2FF"
             android:textSize="18dp" />
 
@@ -129,7 +129,7 @@
             android:id="@+id/signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Register"
+            android:text="Sign Up"
             android:textColor="#00B2FF"/>
     </LinearLayout>
 
