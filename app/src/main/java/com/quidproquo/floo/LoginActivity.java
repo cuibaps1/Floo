@@ -37,7 +37,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         if(firebaseAuth.getCurrentUser() != null){
             finish();
-            Intent intent = new Intent(getApplicationContext(),HomeScreen.class);
+            Intent intent = new Intent(getApplicationContext(),HomeScreenBottomNavigationBar.class);
             startActivity(intent);
         }
 
@@ -74,7 +74,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 progressDialog.dismiss();
                 if(task.isSuccessful()){
                     finish();
-                    Intent intent = new Intent(getApplicationContext(),HomeScreen.class);
+                    Intent intent = new Intent(getApplicationContext(),HomeScreenBottomNavigationBar.class);
                     startActivity(intent);
                 }
             }
