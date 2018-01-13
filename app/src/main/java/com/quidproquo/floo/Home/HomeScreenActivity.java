@@ -1,10 +1,12 @@
-package com.quidproquo.floo;
+package com.quidproquo.floo.Home;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -17,9 +19,16 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
+import com.quidproquo.floo.Login.LoginActivity;
+import com.quidproquo.floo.R;
+import com.quidproquo.floo.Utils.BottomNavigationViewHelper;
 
-public class HomeScreen extends AppCompatActivity implements View.OnClickListener {
-    private static final String TAG = "ViewDatabase";
+public class HomeScreenActivity extends AppCompatActivity implements View.OnClickListener {
+    private static final String TAGD = "ViewDatabase";
+    private static final String TAG = "HomeActivity";
+
+    private static final int ACTIVITY_NUM = 0;
 
     private TextView textViewUserEmail;
     private TextView textViewName;
@@ -35,6 +44,9 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+        Log.d(TAG, "onCreate: starting");
+
+        setupBottomNavigationView();
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -54,10 +66,10 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if(user != null){
-                    Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+                    Log.d(TAGD, "onAuthStateChanged:signed_in:" + user.getUid());
                     toastMessage("Successfully signed in with: " +user.getEmail());
                 } else {
-                    Log.d(TAG, "onAuthStateChanged:signed_out");
+                    Log.d(TAGD, "onAuthStateChanged:signed_out");
                     toastMessage("Successfully signed out");
                 }
             }
@@ -75,15 +87,15 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
             }
         });
 
-        textViewUserEmail = (TextView) findViewById(R.id.userEmail);
-        textViewUserEmail.setText("Welcome " + user.getEmail());
+      //  textViewUserEmail = (TextView) findViewById(R.id.userEmail);
+       // textViewUserEmail.setText("Welcome " + user.getEmail());
 
-        textViewName = (TextView) findViewById(R.id.name);
+       // textViewName = (TextView) findViewById(R.id.name);
 
 
-        buttonLogout = (Button) findViewById(R.id.buttonLogOut);
+      //  buttonLogout = (Button) findViewById(R.id.buttonLogOut);
 
-        buttonLogout.setOnClickListener(this);
+      //  buttonLogout.setOnClickListener(this);
     }
 
   /*  private void showData(DataSnapshot dataSnapshot) {
@@ -95,6 +107,21 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
             userInfo.setYearOfBirth(ds.child(userID).getValue(UserInformation.class).getYearOfBirth());
         }
     }*/
+
+    /**
+     * BottomNavigationView setup
+     */
+  private void setupBottomNavigationView(){
+      Log.d(TAG, "setupBottomNavigationView: setting up BottomNavigationView");
+      BottomNavigationViewEx bottomNavigationViewEx = (BottomNavigationViewEx) findViewById(R.id.bottomNavViewBar);
+      BottomNavigationViewHelper.setupBottomNavigationView(bottomNavigationViewEx);
+
+      BottomNavigationViewHelper.enableNavigation(HomeScreenActivity.this, bottomNavigationViewEx);
+      Menu menu = bottomNavigationViewEx.getMenu();
+      MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
+      menuItem.setChecked(true);
+
+  }
 
     public void onStart(){
         super.onStart();

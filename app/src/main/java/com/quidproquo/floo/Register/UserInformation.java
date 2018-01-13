@@ -1,4 +1,4 @@
-package com.quidproquo.floo.RegisterActivity;
+package com.quidproquo.floo.Register;
 
 /**
  * Created by Phuoc on 9/4/2017.

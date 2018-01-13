@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#00FFFF"
     android:orientation="vertical"
-    tools:context="com.quidproquo.floo.RegisterActivity.RegisterActivity">
+    tools:context="com.quidproquo.floo.Register.RegisterActivity">
 
 
     <LinearLayout

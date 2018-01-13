@@ -1,8 +1,11 @@
-package com.quidproquo.floo;
+package com.quidproquo.floo.Startup;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import com.quidproquo.floo.Login.LoginActivity;
+import com.quidproquo.floo.R;
 
 public class StartupScreen extends AppCompatActivity {
 

@@ -16,21 +16,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".StartupScreen">
+        <activity android:name=".Startup.StartupScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeScreen" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".RegisterActivity.RegisterActivity" />
-        <activity android:name=".RegisterActivity.InformationActivity" />
-        <activity android:name=".RegisterActivity.LanguagueActivity" />
+        <activity android:name=".Home.HomeScreenActivity" />
+        <activity android:name=".Login.LoginActivity" />
+        <activity android:name=".Register.RegisterActivity" />
+        <activity android:name=".Register.InformationActivity" />
+        <activity android:name=".Register.LanguagueActivity" />
         <activity
             android:name=".HomeScreenBottomNavigationBar"
             android:label="@string/title_activity_home_screen"></activity>
+        <activity android:name=".Chat.ChatActivity"/>
+        <activity android:name=".Profile.ProfileActivity"/>
+
     </application>
 
 </manifest>

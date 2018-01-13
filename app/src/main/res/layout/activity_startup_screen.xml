@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#3346FF"
-    tools:context="com.quidproquo.floo.StartupScreen"
+    tools:context="com.quidproquo.floo.Startup.StartupScreen"
     android:weightSum="1"
     android:gravity="center_horizontal">
 

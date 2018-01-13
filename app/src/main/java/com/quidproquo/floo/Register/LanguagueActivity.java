@@ -1,4 +1,4 @@
-package com.quidproquo.floo.RegisterActivity;
+package com.quidproquo.floo.Register;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.quidproquo.floo.HomeScreen;
+import com.quidproquo.floo.Home.HomeScreenActivity;
 import com.quidproquo.floo.R;
 
 public class LanguagueActivity extends AppCompatActivity implements View.OnClickListener {
@@ -27,7 +27,7 @@ public class LanguagueActivity extends AppCompatActivity implements View.OnClick
     @Override
     public void onClick(View v) {
         if (v == finishButton){
-            Intent intent = new Intent(this, HomeScreen.class);
+            Intent intent = new Intent(this, HomeScreenActivity.class);
             startActivity(intent);
         }
     }

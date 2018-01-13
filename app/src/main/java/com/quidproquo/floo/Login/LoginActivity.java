@@ -1,4 +1,4 @@
-package com.quidproquo.floo;
+package com.quidproquo.floo.Login;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -15,7 +15,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.quidproquo.floo.RegisterActivity.RegisterActivity;
+import com.quidproquo.floo.Home.HomeScreenActivity;
+import com.quidproquo.floo.R;
+import com.quidproquo.floo.Register.RegisterActivity;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -37,7 +39,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         if(firebaseAuth.getCurrentUser() != null){
             finish();
-            Intent intent = new Intent(getApplicationContext(),HomeScreenBottomNavigationBar.class);
+            Intent intent = new Intent(getApplicationContext(),HomeScreenActivity.class);
             startActivity(intent);
         }
 
@@ -74,7 +76,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 progressDialog.dismiss();
                 if(task.isSuccessful()){
                     finish();
-                    Intent intent = new Intent(getApplicationContext(),HomeScreenBottomNavigationBar.class);
+                    Intent intent = new Intent(getApplicationContext(),HomeScreenActivity.class);
                     startActivity(intent);
                 }
             }

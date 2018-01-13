@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#FF7E00"
     android:orientation="vertical"
-    tools:context="com.quidproquo.floo.LoginActivity">
+    tools:context="com.quidproquo.floo.Login.LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

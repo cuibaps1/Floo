@@ -1,4 +1,4 @@
-package com.quidproquo.floo.RegisterActivity;
+package com.quidproquo.floo.Register;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -55,6 +55,7 @@ public class InformationActivity extends AppCompatActivity implements View.OnCli
         String lastName = editTextLastName.getText().toString().trim();
         int month = Integer.parseInt(editTextMonthOfBirth.getText().toString().trim());
         int year = Integer.parseInt(editTextYearOfBirth.getText().toString().trim());
+
 
         UserInformation userInformation = new UserInformation(firstName, lastName, month, year);
 

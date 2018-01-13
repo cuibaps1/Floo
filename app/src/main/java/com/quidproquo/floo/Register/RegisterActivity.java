@@ -1,4 +1,4 @@
-package com.quidproquo.floo.RegisterActivity;
+package com.quidproquo.floo.Register;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
