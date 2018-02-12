@@ -1,14 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <include layout="@layout/snippet_top_profilebar"/>
+        <!-- top toolbar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayout1">
+
+            <include layout="@layout/snippet_top_profilebar"/>
+        </RelativeLayout>
+
+        <!-- middle body -->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relLayout1"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/relLayout2"
+                    android:background="@color/white">
+
+                    <include layout="@layout/snippet_top_profile"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="195dp"
+                    android:id="@+id/relLayout3"
+                    android:layout_below="@+id/relLayout2"
+                    android:background="@color/white">
+
+                    <include layout="@layout/snippet_center_profile_setting"/>
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="195dp"
+                    android:id="@+id/relLayout4"
+                    android:layout_below="@+id/relLayout3"
+                    android:background="@color/white">
+
+                    <include layout="@layout/snippet_center_profile_privacy"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:id="@+id/relLayout5"
+                    android:layout_below="@+id/relLayout4"
+                    android:background="@color/white">
+
+                    <include layout="@layout/snippet_center_profile_account"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- bottom navigation -->
         <include layout="@layout/layout_bottom_navigation_view"/>
+
     </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

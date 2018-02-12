@@ -33,6 +33,9 @@
             android:label="@string/title_activity_home_screen"></activity>
         <activity android:name=".Chat.ChatActivity"/>
         <activity android:name=".Profile.ProfileActivity"/>
+        <activity android:name=".Profile.AboutMeActivity"/>
+        <activity android:name=".Profile.LanguageActivity"/>
+        <activity android:name=".Profile.PreviewProfileActivity"/>
 
     </application>
 
